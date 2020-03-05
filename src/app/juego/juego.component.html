@@ -2,21 +2,37 @@
 
 <div class="container">
   <div class="row">
-    <div class="col d-flex animated slideInLeft">
-      <button (click)="buscarSolucion()" class="btn btn-primary">
-        <fa-icon [icon]="faSearch"></fa-icon>
-        Resolver
-      </button>
-      <button (click)="inicializarTablero()" class="btn btn-dark ml-2">
-        <fa-icon [icon]="faIcon"></fa-icon>
-        Limpiar</button>
-    </div>
-  </div>
-  <div class="tablero animated slideInRight">
-    <ng-container *ngFor="let filaCasillas of casillas">
-      <app-casilla (oncambioocupada)="onCambioCasillaOcupada($event)" *ngFor="let casilla of filaCasillas" [casilla]="casilla">
 
-      </app-casilla>
-    </ng-container>
+    <div class="col-12 col-md-5 col-lg-4 mb-3 mb-md-0 d-flex align-content-center align-items-center justify-content-center">
+      <div class="row">
+        <div class="col-12 d-flex justify-content-center animated slideInLeft">
+          <h2>{{ reinasColocadas }}</h2>
+        </div>
+
+        <div class="col-12 d-flex justify-content-center animated slideInLeft">
+
+          <button (click)="buscarSolucion()" class="btn btn-primary">
+            <fa-icon [icon]="faSearch"></fa-icon>
+            Resolver
+          </button>
+          <button (click)="inicializarTablero()" class="btn btn-dark ml-2">
+            <fa-icon [icon]="faIcon"></fa-icon>
+            Limpiar</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-12 col-md-7 col-lg-8 d-flex justify-content-center align-content-center">
+      <div class="tablero animated slideInRight">
+        <ng-container *ngFor="let filaCasillas of casillas">
+          <app-casilla (oncambioocupada)="onCambioCasillaOcupada($event)" *ngFor="let casilla of filaCasillas" [casilla]="casilla">
+
+          </app-casilla>
+        </ng-container>
+      </div>
+    </div>
+
   </div>
+
 </div>
