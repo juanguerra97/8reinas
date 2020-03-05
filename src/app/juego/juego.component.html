@@ -1,1 +1,22 @@
 
+
+<div class="container">
+  <div class="row">
+    <div class="col d-flex animated slideInLeft">
+      <button (click)="buscarSolucion()" class="btn btn-primary">
+        <fa-icon [icon]="faSearch"></fa-icon>
+        Resolver
+      </button>
+      <button (click)="limpiarTablero()" class="btn btn-secondary">
+        <fa-icon [icon]="faIcon"></fa-icon>
+        Limpiar</button>
+    </div>
+  </div>
+  <div class="tablero animated slideInRight">
+    <ng-container *ngFor="let filaCasillas of casillas">
+      <app-casilla (oncambioocupada)="onCambioCasillaOcupada($event)" *ngFor="let casilla of filaCasillas" [casilla]="casilla">
+
+      </app-casilla>
+    </ng-container>
+  </div>
+</div>
