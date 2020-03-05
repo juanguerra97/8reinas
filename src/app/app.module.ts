@@ -5,11 +5,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { JuegoComponent } from './juego/juego.component';
+import { CasillaComponent } from './casilla/casilla.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    JuegoComponent
+    JuegoComponent,
+    CasillaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,33 @@
+
+.casilla {
+  min-height: 50px;
+  min-width: 50px;
+}
+
+.casilla > * {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 30px;
+}
+
+.ocupada {
+  cursor: default;
+}
+
+.libre {
+  cursor: pointer;
+}
+
+.targeted {
+  cursor: no-drop;
+}
+
+.reina-dark {
+  color: #333;
+}
+
+.reina-light {
+  color: #fff;
+}

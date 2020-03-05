@@ -1,0 +1,13 @@
+
+<div
+  (click)="onCasillaClicked()"
+    [ngClass]="{'casilla w-100 h-100':  true,
+                  'bg-dark reina-light': casilla.esPar,
+                  'bg-light reina-dark': !casilla.esPar,
+                  'libre': !casilla.ocupada && casilla.atacantes == 0,
+                  'ocupada': casilla.ocupada,
+                  'targeted': !casilla.ocupada && casilla.atacantes > 0}">
+  <p>
+    <fa-icon *ngIf="casilla.ocupada" [icon]="faChessQueen"></fa-icon>
+  </p>
+</div>
