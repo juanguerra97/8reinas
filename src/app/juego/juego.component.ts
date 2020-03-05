@@ -16,13 +16,13 @@ export class JuegoComponent implements OnInit {
   faIcon = faSkull;
 
   constructor() {
-    this.limpiarTablero();
+    this.inicializarTablero();
   }
 
   ngOnInit() {
   }
 
-  public limpiarTablero(): void {
+  public inicializarTablero(): void {
     this.reinasColocadas = 0;
     let rowPar = false;
     let colPar = false;
@@ -43,6 +43,7 @@ export class JuegoComponent implements OnInit {
     }
   }
 
+  // metodo que se llama cada vez que una casilla pasa a estar ocupada o a desocuparse
   public onCambioCasillaOcupada(casilla: Casilla): void {
 
     let row = 0;
@@ -110,9 +111,17 @@ export class JuegoComponent implements OnInit {
       this.reinasColocadas--;
     }
 
+    if (this.reinasColocadas) {
+      console.log('Has ganado!');
+    }
+
   }
 
   public buscarSolucion(): void {
+
+    if (this.reinasColocadas > 0) {
+      this.inicializarTablero();
+    }
 
     for (let col = 0; col < 8; ++col) {
       for (const row of this.ordenarRandom([0, 1, 2, 3, 4, 5, 6, 7])) {
