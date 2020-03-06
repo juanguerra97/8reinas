@@ -111,7 +111,7 @@ export class JuegoComponent implements OnInit {
       this.reinasColocadas--;
     }
 
-    if (this.reinasColocadas) {
+    if (this.reinasColocadas === 8) {
       console.log('Has ganado!');
     }
 
