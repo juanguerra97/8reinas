@@ -1,13 +1,16 @@
 
 .casilla {
-  min-height: 50px;
-  min-width: 50px;
+  min-height: 35px;
+  min-width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .casilla > * {
+  margin: 0;
+  padding: 0;
   display: block;
-  width: 100%;
-  height: 100%;
   text-align: center;
   font-size: 30px;
 }

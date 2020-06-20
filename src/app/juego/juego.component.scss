@@ -9,12 +9,23 @@
   height: 80vw;
 }
 
-@media(min-width: 500px) {
+@media(min-width: 768px) {
 
   .tablero {
     margin: 0 auto;
-    width: 80vh;
-    height: 80vh;
+    width: 45vw;
+    height: 45vw;
+  }
+
+}
+
+
+@media(min-width: 1000px) {
+
+  .tablero {
+    margin: 0 auto;
+    width: 85vh;
+    height: 85vh;
   }
 
 }
